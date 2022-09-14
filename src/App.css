@@ -1,0 +1,80 @@
+.App-container {
+  display: flex;
+  margin-left: 25%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  background-color: burlywood;
+  width: 50%;
+  text-align: center;
+  border: 2px solid black;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  border-color: grey;
+}
+
+.button {
+  width: fit-content;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+#casual-button {
+  background-color: blanchedalmond;
+}
+
+#sport-button {
+  background-color: lightblue;
+}
+
+#formal-button {
+  background-color: orange;
+}
+
+#outfit-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#top {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 125px;
+  width: 125px;
+  margin: 10px;
+  /* padding: 5px; */
+  border: 2px solid black;
+}
+
+#bottom {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 125px;
+  width: 125px;
+  margin: 10px;
+  /* padding: 5px; */
+  border: 2px solid black;
+}
+
+#shoes {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 125px;
+  width: 125px;
+  margin: 10px;
+  /* padding: 5px; */
+  border: 2px solid black;
+}
