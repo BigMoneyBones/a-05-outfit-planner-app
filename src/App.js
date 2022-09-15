@@ -6,15 +6,20 @@ import clothing from "./data";
 // Math.floor(<yourArray>.length * Math.random())
 
 function App() {
-  const [dressCode, setDressCode] = useState("casual");
+  const [dressCode, setDressCode] = useState({ dressCode: "casual" });
   // console.log("DressCode: ", dressCode);
 
   const findItem = (type) => {
     const filteredItems = clothing.filter(
       (clothingItem) =>
-        clothingItem.type === type && clothingItem.dressCode === dressCode
+        clothingItem.type === type &&
+        clothingItem.dressCode === dressCode.dressCode
     );
     return filteredItems[Math.floor(Math.random() * filteredItems.length)];
+  };
+
+  const resetState = () => {
+    return setDressCode("");
   };
 
   return (
@@ -27,21 +32,24 @@ function App() {
           <button
             className="button"
             id="casual-button"
-            onClick={() => setDressCode("casual")}
+            onClick={() => {
+              resetState();
+              setDressCode({ dressCode: "casual" });
+            }}
           >
             Casual
           </button>
           <button
             className="button"
             id="sport-button"
-            onClick={() => setDressCode("sport")}
+            onClick={() => setDressCode({ dressCode: "sport" })}
           >
             Sport
           </button>
           <button
             className="button"
             id="formal-button"
-            onClick={() => setDressCode("formal")}
+            onClick={() => setDressCode({ dressCode: "formal" })}
           >
             Formal
           </button>
